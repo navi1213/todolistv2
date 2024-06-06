@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo詳細</title>
+</head>
+
+<body>
+    <h1>Todo ID:<%=todo.id%>
+    </h1>
+    <h2>
+        <%= todo.task %>-<%= todo.done ? "完了":"未完了"%> 
+        <form method="POST" action="/todos/<%=todo.id%>/checked?_method=PATCH">
+            <input type="checkbox" name="done">
+            <button>完了</button>
+        </form>
+    </h2>
+    <a href="/todos">戻る</a>
+    <a href="/todos/<%=todo.id%>/edit">編集</a>
+    <form method ="POST" action="/todos/<%=todo.id%>?_method=DELETE">
+        <button>削除</button>
+    </form>
+    
+
+
+</body>
+
+</html>

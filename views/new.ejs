@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoを追加</title>
+</head>
+<body>
+    <h1>todoを追加</h1>
+    <form action="/todos" method="POST">
+        <section>
+            <label for="task">タスク:</label>
+            <input id="task" type="text" placeholder="タスク名" name="task">
+        </section>
+        <button>投稿</button>
+    </form>
+    <a href="/todos">todo一覧に戻る</a>
+</body>
+</html>
