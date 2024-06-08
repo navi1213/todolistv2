@@ -10,23 +10,7 @@ app.use(methodOverride('_method'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-let todos = [
-    {
-        id: uuid(),
-        task: 'Buy Milk',
-        done: true
-    },
-    {
-        id: uuid(),
-        task: 'Buy Eggs',
-        done: false
-    },
-    {
-        id: uuid(),
-        task: 'Buy Bread',
-        done: false
-    }
-];
+let todos = [];
 app.get("/todos", (req, res) => {
     res.render("index", { todos });
 });
